@@ -19,36 +19,62 @@
 
 1. Клонируйте репозиторий:
 
-   ```bash
-   git clone <url_вашего_репозитория>
-   cd internet-speed-test
-   ```
+```bash
+git clone <url_вашего_репозитория>
+cd internet-speed-test
+```
 
 2. Создайте виртуальное окружение:
 
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # Для Windows: venv\Scripts\activate
-   ```
+```bash
+python3 -m venv venv
+source venv/bin/activate  # Для Windows: venv\Scripts\activate
+```
 
 3. Установите зависимости:
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+pip install -r requirements.txt
+```
 
 ## Использование
 
 Запустите скрипт, передав ему URL файла в качестве аргумента:
 
-   ```bash
-   python3 speedtest.py <URL>
-   ```
+```bash
+python3 speedtest.py <URL>
+```
 
 ## Пример запуска
 
 (используется тестовый файл от Cloudflare размером ~25 MB):
 
 ```bash
-   python3 speedtest.py "https://speed.cloudflare.com/__down?bytes=25000000"
-   ```
+python3 speedtest.py "https://speed.cloudflare.com/__down?bytes=25000000"
+```
+
+## Дополнительные параметры
+
+Вы можете изменить количество запросов с помощью флага -n (по умолчанию 10):
+
+```bash
+python3 speedtest.py "https://speed.cloudflare.com/__down?bytes=25000000" -n 5
+```
+
+## Пример вывода
+
+Начало теста. Целевой URL: https://speed.cloudflare.com/__down?bytes=25000000
+Будет выполнено 10 последовательных запросов...
+
+Запрос  1: скачано 24414.06 KB за 2.686 сек
+...
+Запрос 10: скачано 24414.06 KB за 2.623 сек
+
+==============================
+РЕЗУЛЬТАТЫ ТЕСТА
+==============================
+Всего скачано:      238.42 MB
+Общее время:        26.63 сек
+Среднее время:      2.663 сек
+Скорость скачивания: 75.10 Mbps
+==============================
