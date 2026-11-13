@@ -63,6 +63,7 @@ python3 speedtest.py "https://speed.cloudflare.com/__down?bytes=25000000" -n 5
 
 ## Пример вывода
 
+```bash
 Начало теста. Целевой URL: https://speed.cloudflare.com/__down?bytes=25000000
 Будет выполнено 10 последовательных запросов...
 
@@ -78,3 +79,4 @@ python3 speedtest.py "https://speed.cloudflare.com/__down?bytes=25000000" -n 5
 Среднее время:      2.663 сек
 Скорость скачивания: 75.10 Mbps
 ==============================
+```
